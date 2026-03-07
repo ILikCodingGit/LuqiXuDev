@@ -38,10 +38,54 @@ h1 {
     max-width: 800px;
     margin: 80px auto;
     padding: 0 40px;
+    border-bottom: 1px solid #d6d2cc;
+    padding-bottom: 60px;
 }
 
 .intro h1 {
     font-size: 52px;
     font-weight: 500;
     letter-spacing: 0.5px;
+}
+
+.highlights {
+    max-width: 800px;
+    margin: 80px auto;
+    padding: 0 40px;
+}
+
+.highlights h1 {
+    font-size: 52px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+.NSCard img {
+    width: 350px;
+    border-radius: 8px;
+    height: auto;
+}
+
+.NSCard {
+    text-decoration: none;
+    color: inherit;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    display: block;
+    text-align: center;
+    transition: transform 0.2s;
+    max-width: 400px;
+}
+
+.NSCard:hover {
+    transform: scale(1.03);
 }
