@@ -1,54 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Achievements | Luqi Xu</title>
-    <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="styles/glaze.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<title>Achievements</title>
+
+<link rel="stylesheet" href="styles/glaze.css">
+<link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
-    <header>
-        <nav>
-            <a href="index.html">About me</a>
-            <a href="glaze.html">Achievements</a>
-            <a href="projects.html">Projects</a>
-            <a href="collabs.html">Collaborations</a>
-        </nav>
-    </header>
 
-    <main class="timeline-page">
-        <section class="timeline-hero">
-            <h1>Achievements Timeline</h1>
-            <p class="hero-text">
-                A timeline of competitions, awards, invitations, publications, and a few
-                side quests. Click any card to open the relevant competition or event site.
-            </p>
-        </section>
+<header>
+<nav>
+<a href="index.html">About me</a>
+<a href="glaze.html">Achievements</a>
+<a href="projects.html">Projects</a>
+<a href="collabs.html">Collaborations</a>
+</nav>
+</header>
 
-        <div class="divider"></div>
+<h1 class="title">Timeline</h1>
 
-        <section class="timeline-controls">
-            <div class="filter-group">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="informatics">Informatics</button>
-                <button class="filter-btn" data-filter="cybersecurity">Cybersecurity</button>
-                <button class="filter-btn" data-filter="robotics">Robotics</button>
-                <button class="filter-btn" data-filter="math">Math</button>
-                <button class="filter-btn" data-filter="coding">Coding</button>
-                <button class="filter-btn" data-filter="research">Research</button>
-                <button class="filter-btn" data-filter="project">Projects</button>
-            </div>
+<div id="timeline"></div>
 
-            <div class="timeline-summary">
-                <span id="results-count">0 items</span>
-            </div>
-        </section>
+<script src="glaze.js"></script>
 
-        <section id="timeline" class="timeline"></section>
-    </main>
-
-    <script src="glaze.js"></script>
 </body>
 </html>
