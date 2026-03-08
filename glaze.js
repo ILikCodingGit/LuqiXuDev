@@ -26,14 +26,16 @@ const achievements = [
 
     { year: 2025, title: "FRC DDU", preview: "8th & 11th Place", desc: "FIRST Robotics Competition regional event.", link: "https://www.firstinspires.org/robotics/frc" },
     { year: 2025, title: "AIO", preview: "Gold Medal - 400 Points", desc: "Australian Informatics Olympiad competitive programming contest.", link: "https://aio.edu.au" },
+    { year: 2025, title: "PCTC Round 0", preview: "Full Score", desc: "Qualification round of the Perse Coding Team Competition.", link: "https://pctc.perse.co.uk" },
     { year: 2025, title: "PCTC Round 1", preview: "Distinction Top 25%", desc: "Perse Coding Team Competition international contest.", link: "https://pctc.perse.co.uk" },
     { year: 2025, title: "PCTC Round 2", preview: "Distinction Top 25%", desc: "Advanced Perse Coding Team Competition round.", link: "https://pctc.perse.co.uk" },
-    { year: 2025, title: "IMC Prosperity 3", preview: "Ranked 81st", desc: "Algorithmic trading challenge by IMC.", link: "https://prosperity.imc.com" },
 
+    { year: 2025, title: "IMC Prosperity 3", preview: "Ranked 81st", desc: "Algorithmic trading challenge by IMC.", link: "https://prosperity.imc.com" },
     { year: 2025, title: "IOAI Selection", preview: "Round 2 Invitation", desc: "International Olympiad in Artificial Intelligence selection round.", link: "https://ioai.org.au/" },
     { year: 2025, title: "AMC", preview: "Distinction Top 4%", desc: "Australian Mathematics Competition.", link: "https://www.amt.edu.au" },
     { year: 2026, title: "Battlecode", preview: "Top 25 High School", desc: "MIT AI programming strategy competition.", link: "https://battlecode.org" },
     { year: 2026, title: "PCTC Round 0", preview: "Full Score", desc: "Qualification round of the Perse Coding Team Competition.", link: "https://pctc.perse.co.uk" },
+    
     { year: 2026, title: "PCTC Round 1", preview: "9/10 Questions", desc: "Competitive programming contest.", link: "https://pctc.perse.co.uk" }
 ];
 
