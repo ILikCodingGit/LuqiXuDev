@@ -5,7 +5,7 @@ margin:0;
 }
 
 header{
-background-color:#0A0A0A;
+background:#0A0A0A;
 text-align:center;
 padding:20px;
 }
@@ -38,6 +38,18 @@ padding:0 40px;
 display:grid;
 grid-template-columns:repeat(5,1fr);
 gap:30px;
+position:relative;
+}
+
+.card-wrapper{
+text-align:center;
+position:relative;
+}
+
+.year{
+font-weight:bold;
+font-size:16px;
+margin-bottom:12px;
 }
 
 .card{
@@ -50,6 +62,8 @@ overflow:hidden;
 cursor:pointer;
 transition:all 0.25s ease;
 text-align:center;
+position:relative;
+transform:translateY(40px);
 }
 
 .card:hover{
@@ -63,40 +77,92 @@ margin:0;
 font-size:18px;
 }
 
-.year{
-font-weight:bold;
-margin-top:5px;
-}
-
-.extra{
-opacity:0;
+.preview{
+font-weight:600;
 margin-top:10px;
-font-size:14px;
-line-height:1.4;
 transition:opacity 0.2s ease;
 }
 
-.card:hover .extra{
+.description{
+position:absolute;
+left:20px;
+right:20px;
+top:70px;
+font-size:14px;
+line-height:1.4;
+opacity:0;
+transition:opacity 0.2s ease;
+}
+
+.card:hover .preview{
+opacity:0;
+}
+
+.card:hover .description{
 opacity:1;
 }
 
 .line{
 height:2px;
-margin:50px 0;
-background:linear-gradient(
-to right,
-transparent,
-#d6d2cc,
-transparent
-);
+margin:60px 0;
+background:linear-gradient(to right,transparent,#d6d2cc,transparent);
 position:relative;
+transform:scaleX(0);
+transform-origin:left;
+transition:transform 0.6s ease;
+}
+
+.line-animate{
+transform:scaleX(1);
 }
 
 .dot{
 width:16px;
 height:16px;
-background:#6a5acd;
+background:#0A0A0A;
 border-radius:50%;
 position:absolute;
-top:-7px;
+top:-8px;
+transform:translateX(-50%) scale(0);
+}
+
+.dot-animate{
+animation:dotPop 0.3s forwards;
+}
+
+@keyframes dotPop{
+to{transform:translateX(-50%) scale(1);}
+}
+
+.connector{
+position:absolute;
+bottom:1px;
+width:2px;
+height:0;
+left:50%;
+transform:translateX(-50%);
+background:linear-gradient(to top,#0A0A0A,transparent);
+}
+
+.connector-animate{
+animation:growLine 0.4s forwards;
+}
+
+@keyframes growLine{
+to{height:40px;}
+}
+
+.card-animate{
+animation:cardRise 0.4s forwards;
+}
+
+@keyframes cardRise{
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.hidden{
+opacity:0;
 }
