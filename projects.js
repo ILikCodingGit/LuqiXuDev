@@ -1,4 +1,4 @@
-const achievements = [
+const projectItems = [
     {
         year: 2026,
         sortDate: "2026-03-07",
@@ -10,42 +10,16 @@ const achievements = [
         link: "https://store.steampowered.com/app/4179170/",
         sourceLabel: "Steam page"
     },
-    
     {
         year: 2026,
-        sortDate: "2026-02-01",
+        sortDate: "2026-02-03",
         dateLabel: "2026",
         title: "Normanhurst Nitro Scouting App",
-        description: "Built a scouting app for Normanhurst Nitro for collecting and reviewing FRC match data. (site not publicly avaliable)",
+        description: "Helped develop a scouting app with Normanhurst Nitro for collecting and reviewing FRC match data. No public link available.",
         category: "project",
         tag: "Project",
-        sourceLabel: "Project site"
+        sourceLabel: "Private project"
     },
-
-    {
-        year: 2025,
-        sortDate: "2025-07-08",
-        dateLabel: "2025",
-        title: "Ancient Tomb",
-        description: "Released Ancient Tomb on itch.io.",
-        category: "project",
-        tag: "Project",
-        link: "https://ilikcoding.itch.io/ancient-tomb",
-        sourceLabel: "itch.io"
-    },
-
-    {
-        year: 2025,
-        sortDate: "2025-07-22",
-        dateLabel: "2025",
-        title: "Gearbound",
-        description: "Released Gearbound on itch.io.",
-        category: "project",
-        tag: "Project",
-        link: "https://ilikcoding.itch.io/gearbound",
-        sourceLabel: "itch.io"
-    },
-
     {
         year: 2025,
         sortDate: "2025-10-07",
@@ -57,7 +31,28 @@ const achievements = [
         link: "https://ilikcoding.itch.io/rotting-depths-demo",
         sourceLabel: "itch.io"
     },
-
+    {
+        year: 2025,
+        sortDate: "2025-07-22",
+        dateLabel: "2025",
+        title: "Gearbound",
+        description: "Released Gearbound on itch.io.",
+        category: "project",
+        tag: "Project",
+        link: "https://ilikcoding.itch.io/gearbound",
+        sourceLabel: "itch.io"
+    },
+    {
+        year: 2025,
+        sortDate: "2025-07-08",
+        dateLabel: "2025",
+        title: "Ancient Tomb",
+        description: "Released Ancient Tomb on itch.io.",
+        category: "project",
+        tag: "Project",
+        link: "https://ilikcoding.itch.io/ancient-tomb",
+        sourceLabel: "itch.io"
+    },
     {
         year: 2024,
         sortDate: "2024-06-01",
@@ -71,40 +66,35 @@ const achievements = [
     }
 ];
 
-const timeline = document.getElementById("timeline");
-const resultsCount = document.getElementById("results-count");
-const filterButtons = document.querySelectorAll(".filter-btn");
+const timelineElement = document.getElementById("timeline");
+const resultsCountElement = document.getElementById("results-count");
+const revealElements = document.querySelectorAll(".reveal");
 
-let activeFilter = "all";
+function renderProjects() {
+    const sortedItems = [...projectItems].sort((a, b) => new Date(b.sortDate) - new Date(a.sortDate));
 
-function renderTimeline() {
-    const filtered = achievements
-        .filter(item => activeFilter === "all" || item.category === activeFilter)
-        .sort((a, b) => new Date(b.sortDate) - new Date(a.sortDate));
+    resultsCountElement.textContent = `${sortedItems.length} item${sortedItems.length === 1 ? "" : "s"}`;
 
-    resultsCount.textContent = `${filtered.length} item${filtered.length === 1 ? "" : "s"}`;
+    const groupedItems = {};
 
-    if (!filtered.length) {
-        timeline.innerHTML = `<div class="empty-state">No achievements matched that filter. Which is impressive somehow.</div>`;
-        return;
-    }
+    sortedItems.forEach((item) => {
+        if (!groupedItems[item.year]) {
+            groupedItems[item.year] = [];
+        }
 
-    const grouped = {};
-    filtered.forEach(item => {
-        if (!grouped[item.year]) grouped[item.year] = [];
-        grouped[item.year].push(item);
+        groupedItems[item.year].push(item);
     });
 
-    const years = Object.keys(grouped).sort((a, b) => Number(b) - Number(a));
+    const yearKeys = Object.keys(groupedItems).sort((a, b) => Number(b) - Number(a));
 
-    timeline.innerHTML = years.map(year => {
-        const cards = grouped[year].map(item => {
-            const safeLink = item.link && item.link !== "#" ? item.link : "#";
-            const openInNewTab = safeLink !== "#" ? `target="_blank" rel="noopener noreferrer"` : "";
-            const note = item.note ? `<p class="card-note">${item.note}</p>` : "";
+    timelineElement.innerHTML = yearKeys.map((year) => {
+        const cardsHtml = groupedItems[year].map((item, index) => {
+            const safeLink = item.link ? item.link : "#";
+            const openAttributes = item.link ? `target="_blank" rel="noopener noreferrer"` : "";
+            const metaText = item.link ? "Open ↗" : "No public link";
 
             return `
-                <a class="timeline-card" href="${safeLink}" ${openInNewTab}>
+                <a class="timeline-card reveal stagger-card" href="${safeLink}" ${openAttributes} style="transition-delay:${index * 100}ms">
                     <div class="card-top">
                         <span class="card-date">${item.dateLabel}</span>
                         <span class="card-category ${item.category}">${item.tag}</span>
@@ -115,30 +105,43 @@ function renderTimeline() {
 
                     <div class="card-meta">
                         <span>${item.sourceLabel}</span>
-                        ${safeLink !== "#" ? `<span class="card-link">Open ↗</span>` : `<span>No public link</span>`}
+                        <span class="card-link">${metaText}</span>
                     </div>
-
-                    ${note}
                 </a>
             `;
         }).join("");
 
         return `
-            <section class="year-group">
+            <section class="year-group reveal">
                 <div class="year-heading">${year}</div>
-                ${cards}
+                ${cardsHtml}
             </section>
         `;
     }).join("");
+
+    observeReveals();
 }
 
-filterButtons.forEach(button => {
-    button.addEventListener("click", () => {
-        filterButtons.forEach(btn => btn.classList.remove("active"));
-        button.classList.add("active");
-        activeFilter = button.dataset.filter;
-        renderTimeline();
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+            return;
+        }
+
+        entry.target.classList.add("visible");
+        revealObserver.unobserve(entry.target);
     });
+}, {
+    threshold: 0.12
 });
 
-renderTimeline();
+function observeReveals() {
+    const allRevealElements = document.querySelectorAll(".reveal");
+
+    allRevealElements.forEach((element) => {
+        revealObserver.observe(element);
+    });
+}
+
+observeReveals();
+renderProjects();

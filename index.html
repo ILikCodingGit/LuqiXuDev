@@ -1,6 +1,13 @@
-<link rel="stylesheet" href="styles/styles.css">
-<link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap" rel="stylesheet">
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luqi Xu</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
 
 <header>
     <nav>
@@ -10,62 +17,100 @@
     </nav>
 </header>
 
-<div class="intro">
-    <h1>
-        A kid that tries too hard
-    </h1>
+<main>
+    <section class="home-layout reveal">
+        <div class="intro">
+            <h1>A kid that tries too hard</h1>
 
-    <p>Hi! I'm Luqi, a high school student from Normanhurst Boys High School</p>
-
-    <p>I do random stuff regarding programming and tend to start a lot of side projects.<br>
-    From getting top 50% in the International Cybersecurity Olympiad to <br>
-    developing and releasing a game on Steam, it's obvious how many side-quests<br>
-    I do</p>
-</div>
-
-<div class="divider"></div>
-
-<!-- holy glaze -->
-<div class="highlights">
-    <h1>Highlights</h1>
-
-    <h2>Informatics</h2>
-    <p>
-        Australian Informatics Olympiad 2025 - 400 points, gold medal <br>
-        Perse Coding Team Competition Round 1 2026 - 9/10 questions solved <br>
-    </p>
-
-    <h2>Cybersecurity</h2>
-    <p>
-        International Cybersecurity Olympiad 2025 - 370 points, top 50% globally<br>
-        International Cybersecurity Olympiad 2025 - Highest score in Oceania <br>
-    </p>
-
-    <h2>Robotics</h2>
-    <p>
-        FIRST Lego League 2025 - Asia Pacific world tournament invitation <br>
-        VEX V5 Robotics Competition 2025 - Nationals invitation<br>
-    </p>
-
-    <h2>Game Development</h2>
-    <div class="games-grid">
-
-        <a href="https://store.steampowered.com/app/4179170/Noble_Steed/" 
-        target="_blank" 
-        rel="noopener noreferrer" 
-        class="NSCard">
-
-            <img src="images/NobleSteed.webp" alt="Noble Steed">
-
-            <h3>Noble Steed</h3>
+            <p>Hi! I'm Luqi, a high school student from Normanhurst Boys High School</p>
 
             <p>
-                A fast, funny 2D platformer where every level throws you<br>
-                into chaotic combat and questionable heroics,<br>
-                all to rescue your runaway horse… again.
+                I do random stuff regarding programming and tend to start a lot of side projects.<br>
+                From getting top 50% in the International Cybersecurity Olympiad to<br>
+                developing and releasing a game on Steam, it's obvious how many side-quests<br>
+                I do
             </p>
+        </div>
 
-        </a>
+        <aside class="stats reveal">
+            <h2>Stats</h2>
 
-    </div>
-</div>
+            <div class="stat">
+                <span class="stat-number" data-target="8">0</span>
+                <p>Medals</p>
+            </div>
+
+            <div class="stat">
+                <span class="stat-number" data-target="5">0</span>
+                <p>Nationals</p>
+            </div>
+
+            <div class="stat">
+                <span class="stat-number" data-target="3">0</span>
+                <p>Internationals</p>
+            </div>
+
+            <div class="stat">
+                <span class="stat-number" data-target="4">0</span>
+                <p>Perfect Scores</p>
+            </div>
+
+            <div class="stat">
+                <span class="stat-number" data-target="6">0</span>
+                <p>Projects</p>
+            </div>
+
+            <div class="stat">
+                <span class="stat-number" data-target="659">0</span>
+                <p>Noble Steed Downloads</p>
+            </div>
+        </aside>
+    </section>
+
+    <div class="divider reveal"></div>
+
+    <section class="highlights reveal">
+        <h1>Highlights</h1>
+
+        <h2>Informatics</h2>
+        <p>
+            Australian Informatics Olympiad 2025 - 400 points, gold medal <br>
+            Perse Coding Team Competition Round 1 2026 - 9/10 questions solved
+        </p>
+
+        <h2>Cybersecurity</h2>
+        <p>
+            International Cybersecurity Olympiad 2025 - 370 points, top 50% globally <br>
+            International Cybersecurity Olympiad 2025 - Highest score in Oceania
+        </p>
+
+        <h2>Robotics</h2>
+        <p>
+            FIRST Lego League 2025 - Asia Pacific world tournament invitation <br>
+            VEX V5 Robotics Competition 2025 - Nationals invitation
+        </p>
+
+        <h2>Game Development</h2>
+
+        <div class="games-grid">
+            <a href="https://store.steampowered.com/app/4179170/Noble_Steed/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="NSCard reveal">
+                <img src="images/NobleSteed.webp" alt="Noble Steed">
+
+                <h3>Noble Steed</h3>
+
+                <p>
+                    A fast, funny 2D platformer where every level throws you<br>
+                    into chaotic combat and questionable heroics,<br>
+                    all to rescue your runaway horse… again.
+                </p>
+            </a>
+        </div>
+    </section>
+</main>
+
+<script src="index.js"></script>
+</body>
+</html>
