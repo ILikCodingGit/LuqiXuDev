@@ -36,7 +36,10 @@ const achievements = [
     { year: 2026, title: "Battlecode", preview: "Top 25 High School", desc: "MIT AI programming strategy competition.", link: "https://battlecode.org" },
     { year: 2026, title: "PCTC Round 0", preview: "Full Score", desc: "Qualification round of the Perse Coding Team Competition.", link: "https://pctc.perse.co.uk" },
     
-    { year: 2026, title: "PCTC Round 1", preview: "9/10 Questions", desc: "Competitive programming contest.", link: "https://pctc.perse.co.uk" }
+    { year: 2026, title: "PCTC Round 1", preview: "9/10 Questions", desc: "Competitive programming contest.", link: "https://pctc.perse.co.uk" },
+    { year: 2026, title: "PCTC Round 2", preview: "Top 3 globally", desc: "Competitive programming contest.", link: "https://pctc.perse.co.uk" },
+    { year: 2026, title: "FRC Southern Cross Regionals", preview: "4th place alliance knockouts", desc: "FIRST Robotics Competition regional event.", link: "https://www.firstinspires.org/robotics/frc" },
+    
 ];
 
 const timeline = document.getElementById("timeline");
