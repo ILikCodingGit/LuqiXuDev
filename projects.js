@@ -4,7 +4,7 @@ const projectItems = [
         sortDate: "2026-03-07",
         dateLabel: "2026",
         title: "Noble Steed - Steam release",
-        description: "Released demo of Noble Steed on Steam, currently at 659 downloads.",
+        description: "Released demo of Noble Steed on Steam, currently at 1304 downloads.",
         category: "project",
         tag: "Project",
         link: "https://store.steampowered.com/app/4179170/",
