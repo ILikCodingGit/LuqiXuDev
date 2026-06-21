@@ -1,6 +1,17 @@
 const projectItems = [
     {
         year: 2026,
+        sortDate: "2026-20-06",
+        dateLabel: "2026",
+        title: "The Ausrtalian School System Beta",
+        description: "Released a beta version of a school-themed hunger games simulation.",
+        category: "project",
+        tag: "Project",
+        link: "https://ilikcodinggit.github.io/TheAustralianSchoolSystem/",
+        sourceLabel: "Web game"
+    },
+    {
+        year: 2026,
         sortDate: "2026-03-07",
         dateLabel: "2026",
         title: "Noble Steed - Steam release",
