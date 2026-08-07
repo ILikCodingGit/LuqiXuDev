@@ -203,8 +203,24 @@ h1 {
 
     .stats {
         position: static;
+        width: auto;
+        max-width: 700px;
         margin: 40px auto 0;
-        width: min(100%, 420px);
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+
+        padding: 28px;
+    }
+
+    .stats h2 {
+        grid-column: 1 / -1;
+        margin-bottom: 5px;
+    }
+
+    .stat {
+        margin: 0;
     }
 }
 
