@@ -1,42 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | Luqi Xu</title>
-    <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="styles/projects.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <nav>
-            <a href="index.html">About me</a>
-            <a href="glaze.html">Achievements</a>
-            <a href="projects.html">Projects</a>
-        </nav>
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width,initial-scale=1" name="viewport"/>
+    <meta content="#111110" name="theme-color"/>
+    <meta content="Luqi Xu — competitive programming, software projects, leadership and piano arrangements." name="description"/>
+    <title>Projects · Luqi Xu</title>
+    <link href="styles/site.css" rel="stylesheet"/>
+  </head>
+  <body data-page="projects.html" id="top">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div aria-hidden="true" class="reading-progress"></div>
+    <div class="noise"></div>
+    <header class="nav">
+      <a class="brand" href="index.html"><span class="brand-icon">LX<span>.</span></span><span>LUQI XU</span></a>
+      <button aria-expanded="false" aria-label="Toggle navigation" class="menu">☰</button>
+      <nav id="nav">
+        <a class="" href="index.html">About</a>
+        <a class="" href="glaze.html">Achievements</a>
+        <a class="active" href="projects.html">Projects</a>
+        <a class="" href="experience.html">Leadership</a>
+        <a class="" href="publications.html">Piano Scores</a>
+      </nav>
+      <span aria-label="Based in Sydney, Australia" class="nav-status"><i></i> SYDNEY, AU</span>
     </header>
-
-    <main class="timeline-page">
-        <section class="timeline-hero reveal">
-            <h1>Projects</h1>
-            <p class="hero-text">
-                A timeline of released games, documentation work, and coding side quests.
-                Click a card to open the relevant page when available.
-            </p>
-        </section>
-
-        <div class="divider reveal"></div>
-
-        <section class="timeline-controls reveal">
-            <div class="timeline-summary">
-                <span id="results-count">0 items</span>
-            </div>
-        </section>
-
-        <section id="timeline" class="timeline"></section>
+    <main id="main-content">
+      <section class="page-hero container polish-reveal">
+        <div class="eyebrow"><span class="cross">✳</span> 03 / BUILD LOG <span class="eyebrow-line"></span> 2026</div>
+        <h1>Built, shipped, <em>iterated.</em></h1>
+        <p class="lead">Released games, open documentation and selected collaborative projects. Some projects are intentionally private.</p>
+      </section>
+      <section class="container section">
+        <div class="section-head polish-reveal">
+          <div><span class="eyebrow">SELECTED PROJECTS</span><h2>The <em>build log.</em></h2></div>
+          <span class="muted">PUBLIC WORK ONLY</span>
+        </div>
+        <div class="project-grid" id="project-grid"></div>
+      </section>
     </main>
-
-    <script src="projects.js"></script>
-</body>
+    <footer class="footer container">
+      <span>© 2026 LUQI XU</span>
+      <span>BUILT FOR THE SIDE QUESTS.</span>
+      <a href="https://www.youtube.com/@ILikCoding" rel="noopener noreferrer" target="_blank">YOUTUBE ↗</a>
+      <a href="#top">BACK TO TOP ↑</a>
+    </footer>
+    <script src="assets/data.js"></script>
+    <script src="assets/site.js"></script>
+  </body>
 </html>
