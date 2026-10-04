@@ -38,6 +38,7 @@ const achievements = [
     
     { year: 2026, title: "PCTC Round 2", preview: "Top 3 globally", desc: "Competitive programming contest.", link: "https://pctc.perse.co.uk" },
     { year: 2026, title: "FRC Southern Cross Regionals", preview: "4th place alliance knockouts", desc: "FIRST Robotics Competition regional event.", link: "https://www.firstinspires.org/robotics/frc" },
+    { year: 2026, title: "UNSW Battlecode Sprint 1", preview: "Round of 32 - 979 Teams", desc: "Reached the Round of 32 with WeLikCoding in the UNSW Battlecode 2026 Sprint 1 tournament.", link: "https://battlecode.au" },
     { year: 2026, title: "AIO", preview: "Gold Medal - 500 Points", desc: "Australian Informatics Olympiad competitive programming contest.", link: "https://aio.edu.au"},
     
 ];
@@ -77,7 +78,7 @@ function renderTimeline() {
             cardElement.innerHTML = `
                 <h3>${achievement.title}</h3>
                 <div class="preview">${achievement.preview}</div>
-                <div class="description">${achievement.desc}<br><b>Click to view competition ↗</b></div>
+                <div class="description">${achievement.desc}<br><b>Click to view competition ↗︎</b></div>
             `;
 
             wrapperElement.appendChild(yearElement);

@@ -102,7 +102,7 @@ function renderProjects() {
         const cardsHtml = groupedItems[year].map((item, index) => {
             const safeLink = item.link ? item.link : "#";
             const openAttributes = item.link ? `target="_blank" rel="noopener noreferrer"` : "";
-            const metaText = item.link ? "Open ↗" : "No public link";
+            const metaText = item.link ? "Open ↗︎" : "No public link";
 
             return `
                 <a class="timeline-card reveal stagger-card" href="${safeLink}" ${openAttributes} style="transition-delay:${index * 100}ms">
