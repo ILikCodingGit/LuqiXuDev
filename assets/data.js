@@ -34,7 +34,7 @@ window.achievements = [
     { year: 2026, title: "FRC Southern Cross Regionals", preview: "4th place alliance knockouts", desc: "FIRST Robotics Competition regional event.", link: "https://www.firstinspires.org/robotics/frc" },
     { year: 2026, title: "AIO", preview: "Gold Medal - 500 Points", desc: "Australian Informatics Olympiad competitive programming contest.", link: "https://aio.edu.au" },
     { year: 2026, title: "UNSW Battlecode Sprint 1", preview: "Round of 32 - 979 Teams", desc: "Reached the Round of 32 with WeLikCoding in UNSW Battlecode 2026 Sprint 1.", link: "https://battlecode.au" },
-    { year: 2026, title: "Cambridge Battlecode Autumn Sprint 1", preview: "Quarterfinalists", desc: "Reached the quarterfinals of Cambridge Battlecode Autumn 2026 Sprint 1 as a member of Tartarus.", link: "https://2026a.battlecode.co.uk/game/team/59f5706f-16db-4ae0-bb3f-deadb41cdc50" },
+    { year: 2026, title: "Cambridge Battlecode Autumn Sprint 1", preview: "Quarterfinalists - 601 Teams", desc: "Reached the quarterfinals of Cambridge Battlecode Autumn 2026 Sprint 1 as a member of Tartarus.", link: "https://2026a.battlecode.co.uk/game/team/59f5706f-16db-4ae0-bb3f-deadb41cdc50" },
 ];
 window.projectItems = [
     {
