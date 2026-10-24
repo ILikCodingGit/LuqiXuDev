@@ -116,30 +116,31 @@ window.projectItems = [
 ];
 
 
-/* Homepage counts are derived from the published achievement and project lists.
-   Event categories are explicitly curated to avoid counting awards as events. */
+/* Homepage counts. Distinct competition series are counted once, even
+   across multiple rounds, years or awards. International participation is
+   curated to exclude small divisions and invitations alone. */
 window.portfolioStats = (() => {
     const achievements = window.achievements;
-    const key = a => a.year + "|" + a.title;
-    const internationalEvents = new Set([
-        "2024|FLL Asia Pacific", "2024|Botball International", "2024|CoderZ",
-        "2025|ICO", "2025|PCTC Round 2", "2025|IMC Prosperity 3",
-        "2026|Battlecode", "2026|PCTC Round 2",
-        "2026|Cambridge Battlecode Autumn Sprint 1"
-    ]);
-    const nationalEvents = new Set([
-        "2023|VEX IQ Nationals", "2023|VRC Nationals", "2023|FLL Nationals",
-        "2024|VEX V5RC Nationals", "2024|FLL Nationals"
-    ]);
-    const competitionEvents = new Set(achievements
-        .filter(a => !["GCER Conference", "Botball Defense Record"].includes(a.title))
-        .map(key));
+    const competitionSeries = [
+        "VEX IQ", "VRC/V5RC", "FLL", "FTC", "Botball", "CoderZ",
+        "OUCC", "Grok NCSS", "Grok Web", "Math Olympiad", "ICO",
+        "FRC", "AIO", "PCTC", "IMC Prosperity", "IOAI Selection",
+        "AMC", "MIT Battlecode", "UNSW Battlecode", "Cambridge Battlecode"
+    ];
+    const internationalSeries = [
+        "Botball", "CoderZ", "ICO", "PCTC", "IMC Prosperity",
+        "UNSW Battlecode", "Cambridge Battlecode"
+    ];
+    const nationalAppearances = [
+        "2023 VEX IQ", "2023 VRC", "2023 FLL",
+        "2024 V5RC", "2024 FLL"
+    ];
     return {
         projects: window.projectItems.length,
         goldHD: achievements.filter(a => /Gold Medal|Perfect Score HD/i.test(a.preview)).length,
         fullScores: achievements.filter(a => /Full Score|Perfect Score HD/i.test(a.preview)).length,
-        internationals: internationalEvents.size,
-        nationals: nationalEvents.size,
-        competitions: competitionEvents.size
+        internationals: internationalSeries.length,
+        nationals: nationalAppearances.length,
+        competitions: competitionSeries.length
     };
 })();
