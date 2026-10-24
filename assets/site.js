@@ -51,3 +51,11 @@ else
     menu?.setAttribute('aria-expanded', 'false');
 } }); })();
 
+
+/* Populate the compact homepage tally from the same records as the archive. */
+if (window.portfolioStats) {
+    document.querySelectorAll('[data-stat]').forEach(el => {
+        const value = window.portfolioStats[el.dataset.stat];
+        if (Number.isInteger(value)) el.textContent = String(value);
+    });
+}
