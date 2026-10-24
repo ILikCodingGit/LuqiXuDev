@@ -30,7 +30,6 @@ window.achievements = [
     { year: 2026, title: "Battlecode", preview: "Top 25 High School", desc: "MIT AI programming strategy competition.", link: "https://battlecode.org" },
     { year: 2026, title: "PCTC Round 0", preview: "Full Score", desc: "Qualification round of the Perse Coding Team Competition.", link: "https://pctc.perse.co.uk" },
     { year: 2026, title: "PCTC Round 1", preview: "9/10 Questions", desc: "Competitive programming contest.", link: "https://pctc.perse.co.uk" },
-    { year: 2026, title: "PCTC Round 2", preview: "Top 3 globally", desc: "Competitive programming contest.", link: "https://pctc.perse.co.uk" },
     { year: 2026, title: "FRC Southern Cross Regionals", preview: "4th place alliance knockouts", desc: "FIRST Robotics Competition regional event.", link: "https://www.firstinspires.org/robotics/frc" },
     { year: 2026, title: "AIO", preview: "Gold Medal - 500 Points", desc: "Australian Informatics Olympiad competitive programming contest.", link: "https://aio.edu.au" },
     { year: 2026, title: "UNSW Battlecode Sprint 1", preview: "Round of 32 - 979 Teams", desc: "Reached the Round of 32 with WeLikCoding in UNSW Battlecode 2026 Sprint 1.", link: "https://battlecode.au" },
@@ -135,7 +134,6 @@ window.portfolioStats = (() => {
         "2025 ICO top score Oceania",
         "2025 PCTC Round 2 distinction",
         "2025 IMC Prosperity rank 81",
-        "2026 PCTC Round 2 top 3 globally",
         "2026 UNSW Battlecode Sprint 1 round of 32",
         "2026 Cambridge Battlecode Autumn Sprint 1 quarterfinals"
     ];
