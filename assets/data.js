@@ -115,3 +115,31 @@ window.projectItems = [
     }
 ];
 
+
+/* Homepage counts are derived from the published achievement and project lists.
+   Event categories are explicitly curated to avoid counting awards as events. */
+window.portfolioStats = (() => {
+    const achievements = window.achievements;
+    const key = a => a.year + "|" + a.title;
+    const internationalEvents = new Set([
+        "2024|FLL Asia Pacific", "2024|Botball International", "2024|CoderZ",
+        "2025|ICO", "2025|PCTC Round 2", "2025|IMC Prosperity 3",
+        "2026|Battlecode", "2026|PCTC Round 2",
+        "2026|Cambridge Battlecode Autumn Sprint 1"
+    ]);
+    const nationalEvents = new Set([
+        "2023|VEX IQ Nationals", "2023|VRC Nationals", "2023|FLL Nationals",
+        "2024|VEX V5RC Nationals", "2024|FLL Nationals"
+    ]);
+    const competitionEvents = new Set(achievements
+        .filter(a => !["GCER Conference", "Botball Defense Record"].includes(a.title))
+        .map(key));
+    return {
+        projects: window.projectItems.length,
+        goldHD: achievements.filter(a => /Gold Medal|Perfect Score HD/i.test(a.preview)).length,
+        fullScores: achievements.filter(a => /Full Score|Perfect Score HD/i.test(a.preview)).length,
+        internationals: internationalEvents.size,
+        nationals: nationalEvents.size,
+        competitions: competitionEvents.size
+    };
+})();
