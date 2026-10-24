@@ -6,7 +6,107 @@
     <meta content="#111110" name="theme-color"/>
     <meta content="Luqi Xu — competitive programming, software projects, leadership and piano arrangements." name="description"/>
     <title>About · Luqi Xu</title>
-    <link href="styles/site.css?v=20261024-2" rel="stylesheet"/>
+    <link href="styles/site.css?v=20261024-3" rel="stylesheet"/>
+
+<style>
+/* Homepage-critical styles live here so the layout stays intact even when
+   GitHub Pages or a browser serves an older external stylesheet. */
+body[data-page="index.html"] .home-stats,
+body[data-page="index.html"] .spotlight,
+body[data-page="index.html"] .home-projects {
+  width: min(1120px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 36px 0 44px;
+}
+body[data-page="index.html"] .home-stats .section-head,
+body[data-page="index.html"] .spotlight-head,
+body[data-page="index.html"] .home-projects .section-head {
+  display: flex; align-items: end; justify-content: space-between;
+  gap: 20px; margin-bottom: 24px;
+}
+body[data-page="index.html"] .home-stats .section-head h2,
+body[data-page="index.html"] .spotlight-head h2,
+body[data-page="index.html"] .home-projects .section-head h2 { margin: 6px 0 0; }
+body[data-page="index.html"] .stat-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3,minmax(0,1fr)) !important;
+  gap: 14px !important;
+  border: 0 !important;
+}
+body[data-page="index.html"] .stat-grid .stat {
+  display: flex !important; flex-direction: column !important;
+  gap: 9px; padding: 24px !important; min-height: 138px;
+  background: #201e19 !important; border: 1px solid #514734 !important;
+  border-radius: 5px;
+}
+body[data-page="index.html"] .stat-grid .stat strong {
+  display: block !important; font-size: clamp(40px,5vw,62px) !important;
+  line-height: 1 !important; font-weight: 600;
+  color: #e9c56d !important; font-variant-numeric: tabular-nums;
+}
+body[data-page="index.html"] .stat-grid .stat span {
+  display: block !important; font-size: 13px !important;
+  color: #d1c9b8 !important; letter-spacing: .01em;
+}
+body[data-page="index.html"] .stat-note { margin: 16px 0 0; color: #aaa398; font-size: 12px; }
+body[data-page="index.html"] .spotlight-grid,
+body[data-page="index.html"] .home-projects .feature-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3,minmax(0,1fr)) !important;
+  gap: 18px !important;
+}
+body[data-page="index.html"] .spotlight-card {
+  display: flex !important; flex-direction: column !important;
+  padding: 26px !important; min-height: 215px;
+  background: linear-gradient(150deg,#27231d,#1b1a17) !important;
+  border: 1px solid #554831 !important; border-radius: 5px;
+  color: #eee8dc !important; text-decoration: none;
+}
+body[data-page="index.html"] .spotlight-card .label,
+body[data-page="index.html"] .spotlight-card .spot-foot {
+  font: 600 10px Inter,sans-serif; letter-spacing: .12em; color: #dfbc66;
+}
+body[data-page="index.html"] .spotlight-card strong {
+  display: block; font-size: clamp(22px,2.3vw,29px);
+  line-height: 1.2; margin: 20px 0 10px;
+}
+body[data-page="index.html"] .spotlight-card p {
+  font-size: 13px; line-height: 1.6; color: #c7bfb2; margin: 0 0 24px;
+}
+body[data-page="index.html"] .spotlight-card .spot-foot { margin-top: auto; }
+body[data-page="index.html"] .home-projects .feature {
+  display: flex !important; flex-direction: column !important;
+  min-height: 270px; padding: 20px !important; background: #211f1b !important;
+  border: 1px solid #4b4131 !important; border-radius: 5px;
+  text-decoration: none; color: #eee8dc;
+}
+body[data-page="index.html"] .home-projects .feature-art {
+  display: flex; align-items: center; justify-content: center;
+  min-height: 115px; flex: 1; color: #e7bf59;
+}
+body[data-page="index.html"] .home-projects .feature-bottom {
+  display: flex; align-items: end; justify-content: space-between; gap: 12px;
+}
+body[data-page="index.html"] .home-projects .feature-bottom h3 { margin: 0 0 5px; font-size: 22px; }
+body[data-page="index.html"] .home-projects .feature-bottom p { margin: 0; font-size: 13px; color: #bbb4a8; }
+body[data-page="index.html"] .spotlight-card:hover,
+body[data-page="index.html"] .home-projects .feature:hover { border-color: #e7bf59 !important; transform: translateY(-3px); }
+@media(max-width:800px) {
+ body[data-page="index.html"] .stat-grid { grid-template-columns: repeat(2,minmax(0,1fr)) !important; }
+ body[data-page="index.html"] .spotlight-grid,
+ body[data-page="index.html"] .home-projects .feature-grid { grid-template-columns: 1fr !important; }
+}
+@media(max-width:480px) {
+ body[data-page="index.html"] .stat-grid { gap: 9px !important; }
+ body[data-page="index.html"] .stat-grid .stat { padding: 16px !important; min-height: 110px; }
+ body[data-page="index.html"] .home-stats .section-head,
+ body[data-page="index.html"] .spotlight-head { align-items: start; flex-direction: column; }
+}
+@media(prefers-reduced-motion:reduce) {
+ body[data-page="index.html"] .spotlight-card:hover,
+ body[data-page="index.html"] .home-projects .feature:hover { transform: none; }
+}
+</style>
   </head>
   <body data-page="index.html" id="top">
     <a class="skip-link" href="#main-content">Skip to content</a>
@@ -56,7 +156,7 @@
           <a class="spotlight-card polish-reveal" href="glaze.html"><span class="label">2026 / CODING</span><strong>PCTC Top 3 Globally</strong><p>Perse Coding Team Competition, Round 2.</p><span class="spot-foot">ACHIEVEMENTS →</span></a>
         </div>
       </section>
-      <section class="container section" aria-labelledby="projects-title">
+      <section class="container section home-projects" aria-labelledby="projects-title">
         <div class="section-head">
           <div><span class="eyebrow">SELECTED WORK</span><h2 id="projects-title">Things I've made.</h2></div>
           <a class="text-link" href="projects.html">ALL PROJECTS →</a>
@@ -86,7 +186,7 @@
       <a href="https://www.youtube.com/@ILikCoding" rel="noopener noreferrer" target="_blank">YOUTUBE <svg aria-hidden="true" width="0.9em" height="0.9em" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:-0.08em"><path d="M4 12L12 4M6 4H12V10" stroke="currentColor" stroke-width="1.35" stroke-linecap="square" stroke-linejoin="miter"/></svg></a>
       <a href="#top">BACK TO TOP <svg aria-hidden="true" width="0.85em" height="0.85em" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:-0.06em"><path d="M8 13V3M4.5 6.5L8 3L11.5 6.5" stroke="currentColor" stroke-width="1.35" stroke-linecap="square" stroke-linejoin="miter"/></svg></a>
     </footer>
-    <script src="assets/data.js?v=20261024-2"></script>
-    <script src="assets/site.js?v=20261024-2"></script>
+    <script src="assets/data.js?v=20261024-3"></script>
+    <script src="assets/site.js?v=20261024-3"></script>
   </body>
 </html>
