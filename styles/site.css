@@ -1036,17 +1036,6 @@ input {
 .menu {
   color: var(--text);
 }
-/* Small personal details, not a generic event-landing-page aesthetic. */
-.page-hero:after {
-  content: 'LUQI / PERSONAL ARCHIVE';
-  display: block;
-  margin-top: 48px;
-  border-top: 1px solid var(--line);
-  padding-top: 13px;
-  color: #9a9a94;
-  font: 10px Inter,sans-serif;
-  letter-spacing: .18em;
-}
 .hero-panel:after {
   content: '✳';
   position: absolute;
@@ -2305,4 +2294,14 @@ body[data-page="index.html"] .feature-art span {
 .score-pdf-preview iframe {
   position: absolute; inset: 0; width: 100%; height: 100%;
   border: 0; pointer-events: none; background: transparent;
+}
+
+/* Gentle warm gradient, preserving the existing charcoal palette. */
+html { background: #111110; }
+body {
+  background:
+    radial-gradient(ellipse 75% 50% at 78% 5%, rgba(123, 91, 44, .095), transparent 78%),
+    radial-gradient(ellipse 70% 60% at 7% 65%, rgba(93, 74, 53, .065), transparent 82%),
+    linear-gradient(145deg, #151410 0%, #111110 48%, #191611 100%);
+  background-attachment: fixed;
 }
