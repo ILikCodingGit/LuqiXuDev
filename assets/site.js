@@ -52,10 +52,35 @@ else
 } }); })();
 
 
-/* Populate the compact homepage tally from the same records as the archive. */
-if (window.portfolioStats) {
-    document.querySelectorAll('[data-stat]').forEach(el => {
-        const value = window.portfolioStats[el.dataset.stat];
-        if (Number.isInteger(value)) el.textContent = String(value);
+/* Animate the homepage totals on page load. Reduced-motion users see final values. */
+(() => {
+    const stats = window.portfolioStats;
+    if (!stats) return;
+    const nodes = [...document.querySelectorAll('[data-stat]')];
+    if (!nodes.length) return;
+    const targets = nodes.map(node => {
+        const value = stats[node.dataset.stat];
+        return Number.isFinite(value) ? value : 0;
     });
-}
+    const finish = () => nodes.forEach((node, i) => {
+        node.textContent = String(targets[i]);
+    });
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        finish();
+        return;
+    }
+    nodes.forEach(node => node.textContent = '0');
+    const duration = 1700;
+    let start;
+    const animate = now => {
+        if (start === undefined) start = now;
+        const t = Math.min(1, (now - start) / duration);
+        const eased = 1 - Math.pow(1 - t, 3);
+        nodes.forEach((node, i) => {
+            node.textContent = String(Math.min(targets[i], Math.floor(targets[i] * eased)));
+        });
+        if (t < 1) requestAnimationFrame(animate);
+        else finish();
+    };
+    requestAnimationFrame(animate);
+})();
