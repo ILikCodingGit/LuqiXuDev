@@ -2234,3 +2234,61 @@ a:not(.btn):not(.timeline-card):not(.project-card):not(.spotlight-card):not(.she
   .stat:nth-child(n + 3) { border-top: 1px solid var(--line); }
   .home-simple { grid-template-columns: 1fr; }
 }
+
+/* Ensure the restored homepage cards and count grid are styled even if
+   older theme rules are loaded before the homepage overrides. */
+body[data-page="index.html"] .stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+}
+body[data-page="index.html"] .stat {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 22px 18px 23px 0;
+  min-width: 0;
+}
+body[data-page="index.html"] .stat strong {
+  display: block;
+  font-size: clamp(40px, 5vw, 64px);
+  font-weight: 600;
+  color: #e7bf59;
+}
+body[data-page="index.html"] .stat span {
+  display: block;
+  font-size: 13px;
+  color: #bcb5a6;
+}
+body[data-page="index.html"] .spotlight-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+body[data-page="index.html"] .spotlight-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 185px;
+  padding: 24px;
+  border: 1px solid rgba(231,192,87,.25);
+  background: #1d1b18;
+}
+body[data-page="index.html"] .spotlight-card strong {
+  font-size: clamp(21px, 2.2vw, 29px);
+  line-height: 1.2;
+}
+body[data-page="index.html"] .spotlight-card .spot-foot { margin-top: auto; }
+body[data-page="index.html"] .feature-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 18px;
+}
+body[data-page="index.html"] .feature-art span {
+  font-size: clamp(48px, 6vw, 92px);
+  line-height: 1;
+}
+@media (max-width: 850px) {
+  body[data-page="index.html"] .stat-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  body[data-page="index.html"] .spotlight-grid { grid-template-columns: 1fr; }
+  body[data-page="index.html"] .feature-grid { grid-template-columns: 1fr; }
+}
