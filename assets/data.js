@@ -116,31 +116,49 @@ window.projectItems = [
 ];
 
 
-/* Homepage counts. Distinct competition series are counted once, even
-   across multiple rounds, years or awards. International participation is
-   curated to exclude small divisions and invitations alone. */
+/* Counts of documented results, not just competition series.
+   National championship qualifications are kept distinct from national-level
+   awards, and the latter do not imply a championship title. */
 window.portfolioStats = (() => {
     const achievements = window.achievements;
-    const competitionSeries = [
+    const uniqueCompetitions = [
         "VEX IQ", "VRC/V5RC", "FLL", "FTC", "Botball", "CoderZ",
         "OUCC", "Grok NCSS", "Grok Web", "Math Olympiad", "ICO",
         "FRC", "AIO", "PCTC", "IMC Prosperity", "IOAI Selection",
         "AMC", "MIT Battlecode", "UNSW Battlecode", "Cambridge Battlecode"
     ];
-    const internationalSeries = [
-        "Botball", "CoderZ", "ICO", "PCTC", "IMC Prosperity",
-        "UNSW Battlecode", "Cambridge Battlecode"
+    // Separate documented results in different years count separately.
+    // MIT Battlecode is intentionally excluded from this international tally.
+    const internationalResults = [
+        "2024 Botball International rookie award",
+        "2024 CoderZ second place USA",
+        "2025 ICO top score Oceania",
+        "2025 PCTC Round 2 distinction",
+        "2025 IMC Prosperity rank 81",
+        "2026 PCTC Round 2 top 3 globally",
+        "2026 UNSW Battlecode Sprint 1 round of 32",
+        "2026 Cambridge Battlecode Autumn Sprint 1 quarterfinals"
     ];
-    const nationalAppearances = [
-        "2023 VEX IQ", "2023 VRC", "2023 FLL",
-        "2024 V5RC", "2024 FLL"
+    const nationalChampionshipQualifications = [
+        "2023 VEX IQ Nationals invitation",
+        "2023 VRC Nationals invitation",
+        "2023 FLL Nationals invitation",
+        "2024 VEX V5RC Nationals invitation",
+        "2024 FLL Nationals invitation"
+    ];
+    const nationalLevelResults = [
+        "2024 Grok NCSS perfect score HD",
+        "2024 Grok Web perfect score HD",
+        "2025 AIO gold 400",
+        "2025 AMC distinction top 4 percent",
+        "2026 AIO gold 500"
     ];
     return {
         projects: window.projectItems.length,
         goldHD: achievements.filter(a => /Gold Medal|Perfect Score HD/i.test(a.preview)).length,
         fullScores: achievements.filter(a => /Full Score|Perfect Score HD/i.test(a.preview)).length,
-        internationals: internationalSeries.length,
-        nationals: nationalAppearances.length,
-        competitions: competitionSeries.length
+        internationals: internationalResults.length,
+        nationals: nationalChampionshipQualifications.length + nationalLevelResults.length,
+        competitions: uniqueCompetitions.length
     };
 })();
