@@ -34,8 +34,8 @@ window.achievements = [
     { year: 2026, title: "AIO", preview: "Gold Medal - 500 Points", desc: "Australian Informatics Olympiad competitive programming contest.", link: "https://aio.edu.au" },
     { year: 2026, title: "UNSW Battlecode Sprint 1", preview: "Round of 32 - 979 Teams", desc: "Reached the Round of 32 with WeLikCoding in UNSW Battlecode 2026 Sprint 1.", link: "https://battlecode.au" },
     { year: 2026, title: "Cambridge Battlecode Autumn Sprint 1", preview: "Quarterfinalists - 601 Teams", desc: "Reached the quarterfinals of Cambridge Battlecode Autumn 2026 Sprint 1 as a member of Tartarus (renamed to Olympus).", link: "https://2026a.battlecode.co.uk/game/team/59f5706f-16db-4ae0-bb3f-deadb41cdc50" },
-    { year: 2026, title: "Cambridge Battlecode Autumn Sprint 2", preview: "Round of 32 - 692 Teams", desc: "Reached the quarterfinals of Cambridge Battlecode Autumn 2026 Sprint 1 as a member of Olympus.", link: "https://2026a.battlecode.co.uk/game/team/59f5706f-16db-4ae0-bb3f-deadb41cdc50" },
-    { year: 2026, title: "Cambridge Battlecode Autumn Sprint 3", preview: "Round of 32 - 713 Teams", desc: "Reached the quarterfinals of Cambridge Battlecode Autumn 2026 Sprint 1 as a member of Olympus.", link: "https://2026a.battlecode.co.uk/game/team/59f5706f-16db-4ae0-bb3f-deadb41cdc50" },
+    { year: 2026, title: "Cambridge Battlecode Autumn Sprint 2", preview: "Round of 32 - 692 Teams", desc: "Reached the round of 32 in Cambridge Battlecode Autumn 2026 Sprint 2 as a member of Olympus.", link: "https://2026a.battlecode.co.uk/game/team/59f5706f-16db-4ae0-bb3f-deadb41cdc50" },
+    { year: 2026, title: "Cambridge Battlecode Autumn Sprint 3", preview: "Round of 32 - 713 Teams", desc: "Reached the round of 32 in Cambridge Battlecode Autumn 2026 Sprint 3 as a member of Olympus.", link: "https://2026a.battlecode.co.uk/game/team/59f5706f-16db-4ae0-bb3f-deadb41cdc50" },
 ];
 window.projectItems = [
     {
