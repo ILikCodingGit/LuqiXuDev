@@ -27,14 +27,16 @@ window.achievements = [
     { year: 2025, title: "IMC Prosperity 3", preview: "Ranked 81st", desc: "Algorithmic trading challenge by IMC.", link: "https://prosperity.imc.com" },
     { year: 2025, title: "IOAI Selection", preview: "Round 2 Invitation", desc: "International Olympiad in Artificial Intelligence selection round.", link: "https://ioai.org.au/" },
     { year: 2025, title: "AMC", preview: "Distinction Top 4%", desc: "Australian Mathematics Competition.", link: "https://www.amt.edu.au" },
-    { year: 2026, title: "Battlecode", preview: "Top 25 High School", desc: "MIT AI programming strategy competition.", link: "https://battlecode.org" },
+    { year: 2026, title: "MIT Battlecode", preview: "Top 25 High School - 53 Teams", desc: "MIT AI programming strategy competition.", link: "https://battlecode.org" },
     { year: 2026, title: "PCTC Round 0", preview: "Full Score", desc: "Qualification round of the Perse Coding Team Competition.", link: "https://pctc.perse.co.uk" },
     { year: 2026, title: "PCTC Round 1", preview: "9/10 Questions", desc: "Competitive programming contest.", link: "https://pctc.perse.co.uk" },
     { year: 2026, title: "PCTC Round 2", preview: "Top 3 globally", desc: "Competitive programming contest.", link: "https://pctc.perse.co.uk" },
     { year: 2026, title: "FRC Southern Cross Regionals", preview: "4th place alliance knockouts", desc: "FIRST Robotics Competition regional event.", link: "https://www.firstinspires.org/robotics/frc" },
     { year: 2026, title: "AIO", preview: "Gold Medal - 500 Points", desc: "Australian Informatics Olympiad competitive programming contest.", link: "https://aio.edu.au" },
     { year: 2026, title: "UNSW Battlecode Sprint 1", preview: "Round of 32 - 979 Teams", desc: "Reached the Round of 32 with WeLikCoding in UNSW Battlecode 2026 Sprint 1.", link: "https://battlecode.au" },
-    { year: 2026, title: "Cambridge Battlecode Autumn Sprint 1", preview: "Quarterfinalists - 601 Teams", desc: "Reached the quarterfinals of Cambridge Battlecode Autumn 2026 Sprint 1 as a member of Tartarus.", link: "https://2026a.battlecode.co.uk/game/team/59f5706f-16db-4ae0-bb3f-deadb41cdc50" },
+    { year: 2026, title: "Cambridge Battlecode Autumn Sprint 1", preview: "Quarterfinalists - 601 Teams", desc: "Reached the quarterfinals of Cambridge Battlecode Autumn 2026 Sprint 1 as a member of Tartarus (renamed to Olympus).", link: "https://2026a.battlecode.co.uk/game/team/59f5706f-16db-4ae0-bb3f-deadb41cdc50" },
+    { year: 2026, title: "Cambridge Battlecode Autumn Sprint 2", preview: "Round of 32 - 692 Teams", desc: "Reached the quarterfinals of Cambridge Battlecode Autumn 2026 Sprint 1 as a member of Olympus.", link: "https://2026a.battlecode.co.uk/game/team/59f5706f-16db-4ae0-bb3f-deadb41cdc50" },
+    { year: 2026, title: "Cambridge Battlecode Autumn Sprint 3", preview: "Round of 32 - 713 Teams", desc: "Reached the quarterfinals of Cambridge Battlecode Autumn 2026 Sprint 1 as a member of Olympus.", link: "https://2026a.battlecode.co.uk/game/team/59f5706f-16db-4ae0-bb3f-deadb41cdc50" },
 ];
 window.projectItems = [
     {
