@@ -38,11 +38,14 @@ const achievements = [
     
     { year: 2026, title: "PCTC Round 2", preview: "Top 3 globally", desc: "Competitive programming contest.", link: "https://pctc.perse.co.uk" },
     { year: 2026, title: "FRC Southern Cross Regionals", preview: "4th place alliance knockouts", desc: "FIRST Robotics Competition regional event.", link: "https://www.firstinspires.org/robotics/frc" },
-    { year: 2026, title: "AIO", preview: "Gold Medal - 500 Points", desc: "Australian Informatics Olympiad competitive programming contest.", link: "https://aio.edu.au"},
+    { year: 2026, title: "AIO", preview: "Gold Medal - 500 Points", desc: "500 out of 600 points in the Australian Informatics Olympiad competitive programming contest.", link: "https://aio.edu.au"},
     { year: 2026, title: "UNSW Battlecode Sprint 1", preview: "Round of 32 - 979 Teams", desc: "Reached the Round of 32 with WeLikCoding in the UNSW Battlecode 2026 Sprint 1 tournament.", link: "https://battlecode.au" },
     { year: 2026, title: "Cambridge Battlecode Autumn Sprint 1", preview: "Quarterfinalists - 601 Teams", desc: "Reached the quarterfinals of Cambridge Battlecode Autumn 2026 Sprint 1 as a member of Tartarus (renamed to Olympus).", link: "https://2026a.battlecode.co.uk/game/team/59f5706f-16db-4ae0-bb3f-deadb41cdc50" },
+    
     { year: 2026, title: "Cambridge Battlecode Autumn Sprint 2", preview: "Round of 32 - 692 Teams", desc: "Reached the round of 32 in Cambridge Battlecode Autumn 2026 Sprint 2 as a member of Olympus.", link: "https://2026a.battlecode.co.uk/game/team/59f5706f-16db-4ae0-bb3f-deadb41cdc50" },
     { year: 2026, title: "Cambridge Battlecode Autumn Sprint 3", preview: "Round of 32 - 713 Teams", desc: "Reached the round of 32 in Cambridge Battlecode Autumn 2026 Sprint 3 as a member of Olympus.", link: "https://2026a.battlecode.co.uk/game/team/59f5706f-16db-4ae0-bb3f-deadb41cdc50" },
+    { year: 2026, title: "AIOI", preview: "300 Points", desc: "300 out of 400 points in the Australian Informatics Olympiad Invitational competitive programming contest.", link: "https://aio.edu.au"},
+    { year: 2026, title: "AIO School of Excellence Selections", preview: "Selection School ~30 Students", desc: "Selected for the Australian Informatics School of Excellence with approximately 30 students", link: "https://orac.amt.edu.au/hub/competitions"},
 ];
 
 const timeline = document.getElementById("timeline");
