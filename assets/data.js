@@ -158,7 +158,9 @@ window.portfolioStats = (() => {
         "2024 Grok Web perfect score HD",
         "2025 AIO gold 400",
         "2025 AMC distinction top 4 percent",
-        "2026 AIO gold 500"
+        "2026 AIO gold 500",
+        "2026 AIO Invitational Round 2 300/400",
+        "2026 AIO School of Excellence selection"
     ];
     return {
         projects: window.projectItems.length,
